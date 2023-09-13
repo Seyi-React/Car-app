@@ -22,13 +22,13 @@ export default function Page() {
       {/* Car Section */}
       <Image source={car} resizeMode="contain" style={styles.image} />
 
-      {/*Controls */}
-      <Controls />
+    
 
       <FlatList
         showsVerticalScrollIndicator={false}
         data={menuOption}
         renderItem={RenderOption}
+        ListHeaderComponent={Controls}
       />
 
 

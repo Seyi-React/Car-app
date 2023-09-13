@@ -1,26 +1,28 @@
-import { StyleSheet, Text, View } from "react-native";
-import { MaterialCommunityIcons,MaterialIcons } from "@expo/vector-icons";
+import { StyleSheet, Text, Pressable } from "react-native";
+import { MaterialCommunityIcons, MaterialIcons } from "@expo/vector-icons";
+import { Link } from "expo-router";
 
 const RenderOption = ({ item }) => {
   return (
-    <View style={styles.optionRow}>
-      {/* icon */}
-      <MaterialCommunityIcons name={item.iconName} size={26} color="gray" />
+    <Link href={item.href} asChild>
+      <Pressable style={styles.optionRow}>
+        {/* icon */}
+        <MaterialCommunityIcons name={item.iconName} size={26} color="gray" />
 
-      {/* Text */}
-      <Text style={styles.optionText}>{item.name}</Text>
+        {/* Text */}
+        <Text style={styles.optionText}>{item.name}</Text>
 
-      {/* Icon */}
-      <MaterialIcons
-        name="keyboard-arrow-right"
-        size={24}
-        color="gray"
-        style={{ marginLeft: "auto" }}
-      />
-    </View>
+        {/* Icon */}
+        <MaterialIcons
+          name="keyboard-arrow-right"
+          size={24}
+          color="gray"
+          style={{ marginLeft: "auto" }}
+        />
+      </Pressable>
+    </Link>
   );
 };
-
 
 const styles = StyleSheet.create({
   optionRow: {
