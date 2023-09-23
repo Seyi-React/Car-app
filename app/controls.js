@@ -4,7 +4,9 @@ import { MaterialCommunityIcons, Ionicons } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
 
 const ControlScreen = () => {
+
   const router = useRouter();
+  
   return (
     <View style={style.container}>
       <Pressable>
@@ -59,7 +61,7 @@ const style = StyleSheet.create({
   back: {
     position: "relative",
     right: 140,
-    top: 25,
+    top: 35,
     backgroundColor: "gray",
     borderRadius: 5,
   },
